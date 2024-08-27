@@ -2,7 +2,7 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### ServerlessClamscan <a name="ServerlessClamscan" id="cdk-serverless-clamscan.ServerlessClamscan"></a>
+### ServerlessClamscan <a name="ServerlessClamscan" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan"></a>
 
 An [aws-cdk](https://github.com/aws/aws-cdk) construct that uses [ClamAV®](https://www.clamav.net/). to scan objects in Amazon S3 for viruses. The construct provides a flexible interface for a system to act based on the results of a ClamAV virus scan.
 
@@ -35,23 +35,23 @@ Note: The Virus Definitions bucket policy will likely cause a deletion error if 
 the stack associated in the construct. However since the bucket itself gets deleted, you can delete
 the stack again to resolve the error.
 
-#### Initializers <a name="Initializers" id="cdk-serverless-clamscan.ServerlessClamscan.Initializer"></a>
+#### Initializers <a name="Initializers" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.Initializer"></a>
 
 ```typescript
-import { ServerlessClamscan } from 'cdk-serverless-clamscan'
+import { ServerlessClamscan } from '@davidmwhynot/cdk-serverless-clamscan'
 
 new ServerlessClamscan(scope: Construct, id: string, props: ServerlessClamscanProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The parent creating construct (usually `this`). |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.id">id</a></code> | <code>string</code> | The construct's name. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps">ServerlessClamscanProps</a></code> | A `ServerlessClamscanProps` interface. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The parent creating construct (usually `this`). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.id">id</a></code> | <code>string</code> | The construct's name. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.props">props</a></code> | <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps">ServerlessClamscanProps</a></code> | A `ServerlessClamscanProps` interface. |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -59,7 +59,7 @@ The parent creating construct (usually `this`).
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.id"></a>
 
 - *Type:* string
 
@@ -67,9 +67,9 @@ The construct's name.
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-serverless-clamscan.ServerlessClamscanProps">ServerlessClamscanProps</a>
+- *Type:* <a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps">ServerlessClamscanProps</a>
 
 A `ServerlessClamscanProps` interface.
 
@@ -79,13 +79,13 @@ A `ServerlessClamscanProps` interface.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.addSourceBucket">addSourceBucket</a></code> | Sets the specified S3 Bucket as a s3:ObjectCreate* for the ClamAV function. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.getPolicyStatementForBucket">getPolicyStatementForBucket</a></code> | Returns the statement that should be added to the bucket policy in order to prevent objects to be accessed when they are not clean or there have been scanning errors: this policy should be added manually if external buckets are passed to addSourceBucket(). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.addSourceBucket">addSourceBucket</a></code> | Sets the specified S3 Bucket as a s3:ObjectCreate* for the ClamAV function. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.getPolicyStatementForBucket">getPolicyStatementForBucket</a></code> | Returns the statement that should be added to the bucket policy in order to prevent objects to be accessed when they are not clean or there have been scanning errors: this policy should be added manually if external buckets are passed to addSourceBucket(). |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-serverless-clamscan.ServerlessClamscan.toString"></a>
+##### `toString` <a name="toString" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.toString"></a>
 
 ```typescript
 public toString(): string
@@ -93,7 +93,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `addSourceBucket` <a name="addSourceBucket" id="cdk-serverless-clamscan.ServerlessClamscan.addSourceBucket"></a>
+##### `addSourceBucket` <a name="addSourceBucket" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.addSourceBucket"></a>
 
 ```typescript
 public addSourceBucket(bucket: IBucket): void
@@ -104,7 +104,7 @@ Sets the specified S3 Bucket as a s3:ObjectCreate* for the ClamAV function.
 Grants the ClamAV function permissions to get and tag objects.
 Adds a bucket policy to disallow GetObject operations on files that are tagged 'IN PROGRESS', 'INFECTED', or 'ERROR'.
 
-###### `bucket`<sup>Required</sup> <a name="bucket" id="cdk-serverless-clamscan.ServerlessClamscan.addSourceBucket.parameter.bucket"></a>
+###### `bucket`<sup>Required</sup> <a name="bucket" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.addSourceBucket.parameter.bucket"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.IBucket
 
@@ -112,7 +112,7 @@ The bucket to add the scanning bucket policy and s3:ObjectCreate* trigger to.
 
 ---
 
-##### `getPolicyStatementForBucket` <a name="getPolicyStatementForBucket" id="cdk-serverless-clamscan.ServerlessClamscan.getPolicyStatementForBucket"></a>
+##### `getPolicyStatementForBucket` <a name="getPolicyStatementForBucket" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.getPolicyStatementForBucket"></a>
 
 ```typescript
 public getPolicyStatementForBucket(bucket: IBucket): PolicyStatement
@@ -120,7 +120,7 @@ public getPolicyStatementForBucket(bucket: IBucket): PolicyStatement
 
 Returns the statement that should be added to the bucket policy in order to prevent objects to be accessed when they are not clean or there have been scanning errors: this policy should be added manually if external buckets are passed to addSourceBucket().
 
-###### `bucket`<sup>Required</sup> <a name="bucket" id="cdk-serverless-clamscan.ServerlessClamscan.getPolicyStatementForBucket.parameter.bucket"></a>
+###### `bucket`<sup>Required</sup> <a name="bucket" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.getPolicyStatementForBucket.parameter.bucket"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.IBucket
 
@@ -132,21 +132,21 @@ The bucket which you need to protect with the policy.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-serverless-clamscan.ServerlessClamscan.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.isConstruct"></a>
 
 ```typescript
-import { ServerlessClamscan } from 'cdk-serverless-clamscan'
+import { ServerlessClamscan } from '@davidmwhynot/cdk-serverless-clamscan'
 
 ServerlessClamscan.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-serverless-clamscan.ServerlessClamscan.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -158,21 +158,21 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.errorDest">errorDest</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The Lambda Destination for failed on erred scans [ERROR, IN PROGRESS (If error is due to Lambda timeout)]. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.resultDest">resultDest</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The Lambda Destination for completed ClamAV scans [CLEAN, INFECTED]. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.scanAssumedPrincipal">scanAssumedPrincipal</a></code> | <code>aws-cdk-lib.aws_iam.ArnPrincipal</code> | *No description.* |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.cleanRule">cleanRule</a></code> | <code>aws-cdk-lib.aws_events.Rule</code> | Conditional: An Event Bridge Rule for files that are marked 'CLEAN' by ClamAV if a success destination was not specified. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.defsAccessLogsBucket">defsAccessLogsBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Conditional: The Bucket for access logs for the virus definitions bucket if logging is enabled (defsBucketAccessLogsConfig). |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.errorDeadLetterQueue">errorDeadLetterQueue</a></code> | <code>aws-cdk-lib.aws_sqs.Queue</code> | Conditional: The SQS Dead Letter Queue for the errorQueue if a failure (onError) destination was not specified. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.errorQueue">errorQueue</a></code> | <code>aws-cdk-lib.aws_sqs.Queue</code> | Conditional: The SQS Queue for erred scans if a failure (onError) destination was not specified. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.infectedRule">infectedRule</a></code> | <code>aws-cdk-lib.aws_events.Rule</code> | Conditional: An Event Bridge Rule for files that are marked 'INFECTED' by ClamAV if a success destination was not specified. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.resultBus">resultBus</a></code> | <code>aws-cdk-lib.aws_events.EventBus</code> | Conditional: The Event Bridge Bus for completed ClamAV scans if a success (onResult) destination was not specified. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscan.property.useImportedBuckets">useImportedBuckets</a></code> | <code>boolean</code> | Conditional: When true, the user accepted the responsibility for using imported buckets. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.errorDest">errorDest</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The Lambda Destination for failed on erred scans [ERROR, IN PROGRESS (If error is due to Lambda timeout)]. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.resultDest">resultDest</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The Lambda Destination for completed ClamAV scans [CLEAN, INFECTED]. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.scanAssumedPrincipal">scanAssumedPrincipal</a></code> | <code>aws-cdk-lib.aws_iam.ArnPrincipal</code> | *No description.* |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.cleanRule">cleanRule</a></code> | <code>aws-cdk-lib.aws_events.Rule</code> | Conditional: An Event Bridge Rule for files that are marked 'CLEAN' by ClamAV if a success destination was not specified. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.defsAccessLogsBucket">defsAccessLogsBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Conditional: The Bucket for access logs for the virus definitions bucket if logging is enabled (defsBucketAccessLogsConfig). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.errorDeadLetterQueue">errorDeadLetterQueue</a></code> | <code>aws-cdk-lib.aws_sqs.Queue</code> | Conditional: The SQS Dead Letter Queue for the errorQueue if a failure (onError) destination was not specified. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.errorQueue">errorQueue</a></code> | <code>aws-cdk-lib.aws_sqs.Queue</code> | Conditional: The SQS Queue for erred scans if a failure (onError) destination was not specified. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.infectedRule">infectedRule</a></code> | <code>aws-cdk-lib.aws_events.Rule</code> | Conditional: An Event Bridge Rule for files that are marked 'INFECTED' by ClamAV if a success destination was not specified. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.resultBus">resultBus</a></code> | <code>aws-cdk-lib.aws_events.EventBus</code> | Conditional: The Event Bridge Bus for completed ClamAV scans if a success (onResult) destination was not specified. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.useImportedBuckets">useImportedBuckets</a></code> | <code>boolean</code> | Conditional: When true, the user accepted the responsibility for using imported buckets. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-serverless-clamscan.ServerlessClamscan.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -184,7 +184,7 @@ The tree node.
 
 ---
 
-##### `errorDest`<sup>Required</sup> <a name="errorDest" id="cdk-serverless-clamscan.ServerlessClamscan.property.errorDest"></a>
+##### `errorDest`<sup>Required</sup> <a name="errorDest" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.errorDest"></a>
 
 ```typescript
 public readonly errorDest: IDestination;
@@ -196,7 +196,7 @@ The Lambda Destination for failed on erred scans [ERROR, IN PROGRESS (If error i
 
 ---
 
-##### `resultDest`<sup>Required</sup> <a name="resultDest" id="cdk-serverless-clamscan.ServerlessClamscan.property.resultDest"></a>
+##### `resultDest`<sup>Required</sup> <a name="resultDest" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.resultDest"></a>
 
 ```typescript
 public readonly resultDest: IDestination;
@@ -208,7 +208,7 @@ The Lambda Destination for completed ClamAV scans [CLEAN, INFECTED].
 
 ---
 
-##### `scanAssumedPrincipal`<sup>Required</sup> <a name="scanAssumedPrincipal" id="cdk-serverless-clamscan.ServerlessClamscan.property.scanAssumedPrincipal"></a>
+##### `scanAssumedPrincipal`<sup>Required</sup> <a name="scanAssumedPrincipal" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.scanAssumedPrincipal"></a>
 
 ```typescript
 public readonly scanAssumedPrincipal: ArnPrincipal;
@@ -218,7 +218,7 @@ public readonly scanAssumedPrincipal: ArnPrincipal;
 
 ---
 
-##### `cleanRule`<sup>Optional</sup> <a name="cleanRule" id="cdk-serverless-clamscan.ServerlessClamscan.property.cleanRule"></a>
+##### `cleanRule`<sup>Optional</sup> <a name="cleanRule" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.cleanRule"></a>
 
 ```typescript
 public readonly cleanRule: Rule;
@@ -230,7 +230,7 @@ Conditional: An Event Bridge Rule for files that are marked 'CLEAN' by ClamAV if
 
 ---
 
-##### `defsAccessLogsBucket`<sup>Optional</sup> <a name="defsAccessLogsBucket" id="cdk-serverless-clamscan.ServerlessClamscan.property.defsAccessLogsBucket"></a>
+##### `defsAccessLogsBucket`<sup>Optional</sup> <a name="defsAccessLogsBucket" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.defsAccessLogsBucket"></a>
 
 ```typescript
 public readonly defsAccessLogsBucket: IBucket;
@@ -242,7 +242,7 @@ Conditional: The Bucket for access logs for the virus definitions bucket if logg
 
 ---
 
-##### `errorDeadLetterQueue`<sup>Optional</sup> <a name="errorDeadLetterQueue" id="cdk-serverless-clamscan.ServerlessClamscan.property.errorDeadLetterQueue"></a>
+##### `errorDeadLetterQueue`<sup>Optional</sup> <a name="errorDeadLetterQueue" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.errorDeadLetterQueue"></a>
 
 ```typescript
 public readonly errorDeadLetterQueue: Queue;
@@ -254,7 +254,7 @@ Conditional: The SQS Dead Letter Queue for the errorQueue if a failure (onError)
 
 ---
 
-##### `errorQueue`<sup>Optional</sup> <a name="errorQueue" id="cdk-serverless-clamscan.ServerlessClamscan.property.errorQueue"></a>
+##### `errorQueue`<sup>Optional</sup> <a name="errorQueue" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.errorQueue"></a>
 
 ```typescript
 public readonly errorQueue: Queue;
@@ -266,7 +266,7 @@ Conditional: The SQS Queue for erred scans if a failure (onError) destination wa
 
 ---
 
-##### `infectedRule`<sup>Optional</sup> <a name="infectedRule" id="cdk-serverless-clamscan.ServerlessClamscan.property.infectedRule"></a>
+##### `infectedRule`<sup>Optional</sup> <a name="infectedRule" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.infectedRule"></a>
 
 ```typescript
 public readonly infectedRule: Rule;
@@ -278,7 +278,7 @@ Conditional: An Event Bridge Rule for files that are marked 'INFECTED' by ClamAV
 
 ---
 
-##### `resultBus`<sup>Optional</sup> <a name="resultBus" id="cdk-serverless-clamscan.ServerlessClamscan.property.resultBus"></a>
+##### `resultBus`<sup>Optional</sup> <a name="resultBus" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.resultBus"></a>
 
 ```typescript
 public readonly resultBus: EventBus;
@@ -290,7 +290,7 @@ Conditional: The Event Bridge Bus for completed ClamAV scans if a success (onRes
 
 ---
 
-##### `useImportedBuckets`<sup>Optional</sup> <a name="useImportedBuckets" id="cdk-serverless-clamscan.ServerlessClamscan.property.useImportedBuckets"></a>
+##### `useImportedBuckets`<sup>Optional</sup> <a name="useImportedBuckets" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscan.property.useImportedBuckets"></a>
 
 ```typescript
 public readonly useImportedBuckets: boolean;
@@ -305,14 +305,14 @@ Conditional: When true, the user accepted the responsibility for using imported 
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### ServerlessClamscanLoggingProps <a name="ServerlessClamscanLoggingProps" id="cdk-serverless-clamscan.ServerlessClamscanLoggingProps"></a>
+### ServerlessClamscanLoggingProps <a name="ServerlessClamscanLoggingProps" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanLoggingProps"></a>
 
 Interface for ServerlessClamscan Virus Definitions S3 Bucket Logging.
 
-#### Initializer <a name="Initializer" id="cdk-serverless-clamscan.ServerlessClamscanLoggingProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanLoggingProps.Initializer"></a>
 
 ```typescript
-import { ServerlessClamscanLoggingProps } from 'cdk-serverless-clamscan'
+import { ServerlessClamscanLoggingProps } from '@davidmwhynot/cdk-serverless-clamscan'
 
 const serverlessClamscanLoggingProps: ServerlessClamscanLoggingProps = { ... }
 ```
@@ -321,12 +321,12 @@ const serverlessClamscanLoggingProps: ServerlessClamscanLoggingProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanLoggingProps.property.logsBucket">logsBucket</a></code> | <code>boolean \| aws-cdk-lib.aws_s3.IBucket</code> | Destination bucket for the server access logs (Default: Creates a new S3 Bucket for access logs). |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanLoggingProps.property.logsPrefix">logsPrefix</a></code> | <code>string</code> | Optional log file prefix to use for the bucket's access logs, option is ignored if logs_bucket is set to false. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanLoggingProps.property.logsBucket">logsBucket</a></code> | <code>boolean \| aws-cdk-lib.aws_s3.IBucket</code> | Destination bucket for the server access logs (Default: Creates a new S3 Bucket for access logs). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanLoggingProps.property.logsPrefix">logsPrefix</a></code> | <code>string</code> | Optional log file prefix to use for the bucket's access logs, option is ignored if logs_bucket is set to false. |
 
 ---
 
-##### `logsBucket`<sup>Optional</sup> <a name="logsBucket" id="cdk-serverless-clamscan.ServerlessClamscanLoggingProps.property.logsBucket"></a>
+##### `logsBucket`<sup>Optional</sup> <a name="logsBucket" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanLoggingProps.property.logsBucket"></a>
 
 ```typescript
 public readonly logsBucket: boolean | IBucket;
@@ -338,7 +338,7 @@ Destination bucket for the server access logs (Default: Creates a new S3 Bucket 
 
 ---
 
-##### `logsPrefix`<sup>Optional</sup> <a name="logsPrefix" id="cdk-serverless-clamscan.ServerlessClamscanLoggingProps.property.logsPrefix"></a>
+##### `logsPrefix`<sup>Optional</sup> <a name="logsPrefix" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanLoggingProps.property.logsPrefix"></a>
 
 ```typescript
 public readonly logsPrefix: string;
@@ -350,14 +350,14 @@ Optional log file prefix to use for the bucket's access logs, option is ignored 
 
 ---
 
-### ServerlessClamscanProps <a name="ServerlessClamscanProps" id="cdk-serverless-clamscan.ServerlessClamscanProps"></a>
+### ServerlessClamscanProps <a name="ServerlessClamscanProps" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps"></a>
 
 Interface for creating a ServerlessClamscan.
 
-#### Initializer <a name="Initializer" id="cdk-serverless-clamscan.ServerlessClamscanProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.Initializer"></a>
 
 ```typescript
-import { ServerlessClamscanProps } from 'cdk-serverless-clamscan'
+import { ServerlessClamscanProps } from '@davidmwhynot/cdk-serverless-clamscan'
 
 const serverlessClamscanProps: ServerlessClamscanProps = { ... }
 ```
@@ -366,21 +366,21 @@ const serverlessClamscanProps: ServerlessClamscanProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.acceptResponsibilityForUsingImportedBucket">acceptResponsibilityForUsingImportedBucket</a></code> | <code>boolean</code> | Allows the use of imported buckets. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.buckets">buckets</a></code> | <code>aws-cdk-lib.aws_s3.IBucket[]</code> | An optional list of S3 buckets to configure for ClamAV Virus Scanning; |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.defsBucketAccessLogsConfig">defsBucketAccessLogsConfig</a></code> | <code><a href="#cdk-serverless-clamscan.ServerlessClamscanLoggingProps">ServerlessClamscanLoggingProps</a></code> | Whether or not to enable Access Logging for the Virus Definitions bucket, you can specify an existing bucket and prefix (Default: Creates a new S3 Bucket for access logs). |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.efsEncryption">efsEncryption</a></code> | <code>boolean</code> | Whether or not to enable encryption on EFS filesystem (Default: enabled). |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.efsPerformanceMode">efsPerformanceMode</a></code> | <code>aws-cdk-lib.aws_efs.PerformanceMode</code> | Set the performance mode of the EFS file system (Default: GENERAL_PURPOSE). |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.efsProvisionedThroughputPerSecond">efsProvisionedThroughputPerSecond</a></code> | <code>aws-cdk-lib.Size</code> | Provisioned throughput for the EFS file system. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.efsThroughputMode">efsThroughputMode</a></code> | <code>aws-cdk-lib.aws_efs.ThroughputMode</code> | Set the throughput mode of the EFS file system (Default: BURSTING). |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.onError">onError</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The Lambda Destination for files that fail to scan and are marked 'ERROR' or stuck 'IN PROGRESS' due to a Lambda timeout (Default: Creates and publishes to a new SQS queue if unspecified). |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.onResult">onResult</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The Lambda Destination for files marked 'CLEAN' or 'INFECTED' based on the ClamAV Virus scan or 'N/A' for scans triggered by S3 folder creation events marked (Default: Creates and publishes to a new Event Bridge Bus if unspecified). |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.reservedConcurrency">reservedConcurrency</a></code> | <code>number</code> | Optionally set a reserved concurrency for the virus scanning Lambda. |
-| <code><a href="#cdk-serverless-clamscan.ServerlessClamscanProps.property.scanFunctionMemorySize">scanFunctionMemorySize</a></code> | <code>number</code> | Optionally set the memory allocation for the scan function. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.acceptResponsibilityForUsingImportedBucket">acceptResponsibilityForUsingImportedBucket</a></code> | <code>boolean</code> | Allows the use of imported buckets. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.buckets">buckets</a></code> | <code>aws-cdk-lib.aws_s3.IBucket[]</code> | An optional list of S3 buckets to configure for ClamAV Virus Scanning; |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.defsBucketAccessLogsConfig">defsBucketAccessLogsConfig</a></code> | <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanLoggingProps">ServerlessClamscanLoggingProps</a></code> | Whether or not to enable Access Logging for the Virus Definitions bucket, you can specify an existing bucket and prefix (Default: Creates a new S3 Bucket for access logs). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsEncryption">efsEncryption</a></code> | <code>boolean</code> | Whether or not to enable encryption on EFS filesystem (Default: enabled). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsPerformanceMode">efsPerformanceMode</a></code> | <code>aws-cdk-lib.aws_efs.PerformanceMode</code> | Set the performance mode of the EFS file system (Default: GENERAL_PURPOSE). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsProvisionedThroughputPerSecond">efsProvisionedThroughputPerSecond</a></code> | <code>aws-cdk-lib.Size</code> | Provisioned throughput for the EFS file system. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsThroughputMode">efsThroughputMode</a></code> | <code>aws-cdk-lib.aws_efs.ThroughputMode</code> | Set the throughput mode of the EFS file system (Default: BURSTING). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.onError">onError</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The Lambda Destination for files that fail to scan and are marked 'ERROR' or stuck 'IN PROGRESS' due to a Lambda timeout (Default: Creates and publishes to a new SQS queue if unspecified). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.onResult">onResult</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The Lambda Destination for files marked 'CLEAN' or 'INFECTED' based on the ClamAV Virus scan or 'N/A' for scans triggered by S3 folder creation events marked (Default: Creates and publishes to a new Event Bridge Bus if unspecified). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.reservedConcurrency">reservedConcurrency</a></code> | <code>number</code> | Optionally set a reserved concurrency for the virus scanning Lambda. |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.scanFunctionMemorySize">scanFunctionMemorySize</a></code> | <code>number</code> | Optionally set the memory allocation for the scan function. |
 
 ---
 
-##### `acceptResponsibilityForUsingImportedBucket`<sup>Optional</sup> <a name="acceptResponsibilityForUsingImportedBucket" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.acceptResponsibilityForUsingImportedBucket"></a>
+##### `acceptResponsibilityForUsingImportedBucket`<sup>Optional</sup> <a name="acceptResponsibilityForUsingImportedBucket" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.acceptResponsibilityForUsingImportedBucket"></a>
 
 ```typescript
 public readonly acceptResponsibilityForUsingImportedBucket: boolean;
@@ -394,7 +394,7 @@ When using imported buckets the user is responsible for adding the required poli
 
 ---
 
-##### `buckets`<sup>Optional</sup> <a name="buckets" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.buckets"></a>
+##### `buckets`<sup>Optional</sup> <a name="buckets" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.buckets"></a>
 
 ```typescript
 public readonly buckets: IBucket[];
@@ -408,19 +408,19 @@ buckets can be added later by calling addSourceBucket.
 
 ---
 
-##### `defsBucketAccessLogsConfig`<sup>Optional</sup> <a name="defsBucketAccessLogsConfig" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.defsBucketAccessLogsConfig"></a>
+##### `defsBucketAccessLogsConfig`<sup>Optional</sup> <a name="defsBucketAccessLogsConfig" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.defsBucketAccessLogsConfig"></a>
 
 ```typescript
 public readonly defsBucketAccessLogsConfig: ServerlessClamscanLoggingProps;
 ```
 
-- *Type:* <a href="#cdk-serverless-clamscan.ServerlessClamscanLoggingProps">ServerlessClamscanLoggingProps</a>
+- *Type:* <a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanLoggingProps">ServerlessClamscanLoggingProps</a>
 
 Whether or not to enable Access Logging for the Virus Definitions bucket, you can specify an existing bucket and prefix (Default: Creates a new S3 Bucket for access logs).
 
 ---
 
-##### `efsEncryption`<sup>Optional</sup> <a name="efsEncryption" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.efsEncryption"></a>
+##### `efsEncryption`<sup>Optional</sup> <a name="efsEncryption" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsEncryption"></a>
 
 ```typescript
 public readonly efsEncryption: boolean;
@@ -432,7 +432,7 @@ Whether or not to enable encryption on EFS filesystem (Default: enabled).
 
 ---
 
-##### `efsPerformanceMode`<sup>Optional</sup> <a name="efsPerformanceMode" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.efsPerformanceMode"></a>
+##### `efsPerformanceMode`<sup>Optional</sup> <a name="efsPerformanceMode" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsPerformanceMode"></a>
 
 ```typescript
 public readonly efsPerformanceMode: PerformanceMode;
@@ -444,7 +444,7 @@ Set the performance mode of the EFS file system (Default: GENERAL_PURPOSE).
 
 ---
 
-##### `efsProvisionedThroughputPerSecond`<sup>Optional</sup> <a name="efsProvisionedThroughputPerSecond" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.efsProvisionedThroughputPerSecond"></a>
+##### `efsProvisionedThroughputPerSecond`<sup>Optional</sup> <a name="efsProvisionedThroughputPerSecond" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsProvisionedThroughputPerSecond"></a>
 
 ```typescript
 public readonly efsProvisionedThroughputPerSecond: Size;
@@ -458,7 +458,7 @@ This is a required property if the throughput mode is set to PROVISIONED. Must b
 
 ---
 
-##### `efsThroughputMode`<sup>Optional</sup> <a name="efsThroughputMode" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.efsThroughputMode"></a>
+##### `efsThroughputMode`<sup>Optional</sup> <a name="efsThroughputMode" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsThroughputMode"></a>
 
 ```typescript
 public readonly efsThroughputMode: ThroughputMode;
@@ -470,7 +470,7 @@ Set the throughput mode of the EFS file system (Default: BURSTING).
 
 ---
 
-##### `onError`<sup>Optional</sup> <a name="onError" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.onError"></a>
+##### `onError`<sup>Optional</sup> <a name="onError" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.onError"></a>
 
 ```typescript
 public readonly onError: IDestination;
@@ -482,7 +482,7 @@ The Lambda Destination for files that fail to scan and are marked 'ERROR' or stu
 
 ---
 
-##### `onResult`<sup>Optional</sup> <a name="onResult" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.onResult"></a>
+##### `onResult`<sup>Optional</sup> <a name="onResult" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.onResult"></a>
 
 ```typescript
 public readonly onResult: IDestination;
@@ -494,7 +494,7 @@ The Lambda Destination for files marked 'CLEAN' or 'INFECTED' based on the ClamA
 
 ---
 
-##### `reservedConcurrency`<sup>Optional</sup> <a name="reservedConcurrency" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.reservedConcurrency"></a>
+##### `reservedConcurrency`<sup>Optional</sup> <a name="reservedConcurrency" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.reservedConcurrency"></a>
 
 ```typescript
 public readonly reservedConcurrency: number;
@@ -508,7 +508,7 @@ Optionally set a reserved concurrency for the virus scanning Lambda.
 
 ---
 
-##### `scanFunctionMemorySize`<sup>Optional</sup> <a name="scanFunctionMemorySize" id="cdk-serverless-clamscan.ServerlessClamscanProps.property.scanFunctionMemorySize"></a>
+##### `scanFunctionMemorySize`<sup>Optional</sup> <a name="scanFunctionMemorySize" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.scanFunctionMemorySize"></a>
 
 ```typescript
 public readonly scanFunctionMemorySize: number;

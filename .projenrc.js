@@ -1,4 +1,5 @@
 const { awscdk } = require('projen');
+const { NpmAccess } = require('projen/lib/javascript');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
@@ -57,6 +58,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
   buildWorkflow: true,
   release: true,
+  npmAccess: NpmAccess.PUBLIC,
 });
 project.package.addField('resolutions', {
   'set-value': '^4.0.1',

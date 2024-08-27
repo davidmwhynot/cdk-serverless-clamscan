@@ -373,6 +373,7 @@ const serverlessClamscanProps: ServerlessClamscanProps = { ... }
 | <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsPerformanceMode">efsPerformanceMode</a></code> | <code>aws-cdk-lib.aws_efs.PerformanceMode</code> | Set the performance mode of the EFS file system (Default: GENERAL_PURPOSE). |
 | <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsProvisionedThroughputPerSecond">efsProvisionedThroughputPerSecond</a></code> | <code>aws-cdk-lib.Size</code> | Provisioned throughput for the EFS file system. |
 | <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.efsThroughputMode">efsThroughputMode</a></code> | <code>aws-cdk-lib.aws_efs.ThroughputMode</code> | Set the throughput mode of the EFS file system (Default: BURSTING). |
+| <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.insightsVersion">insightsVersion</a></code> | <code>aws-cdk-lib.aws_lambda.LambdaInsightsVersion</code> | *No description.* |
 | <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.onError">onError</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The Lambda Destination for files that fail to scan and are marked 'ERROR' or stuck 'IN PROGRESS' due to a Lambda timeout (Default: Creates and publishes to a new SQS queue if unspecified). |
 | <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.onResult">onResult</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The Lambda Destination for files marked 'CLEAN' or 'INFECTED' based on the ClamAV Virus scan or 'N/A' for scans triggered by S3 folder creation events marked (Default: Creates and publishes to a new Event Bridge Bus if unspecified). |
 | <code><a href="#@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.reservedConcurrency">reservedConcurrency</a></code> | <code>number</code> | Optionally set a reserved concurrency for the virus scanning Lambda. |
@@ -467,6 +468,16 @@ public readonly efsThroughputMode: ThroughputMode;
 - *Type:* aws-cdk-lib.aws_efs.ThroughputMode
 
 Set the throughput mode of the EFS file system (Default: BURSTING).
+
+---
+
+##### `insightsVersion`<sup>Optional</sup> <a name="insightsVersion" id="@davidmwhynot/cdk-serverless-clamscan.ServerlessClamscanProps.property.insightsVersion"></a>
+
+```typescript
+public readonly insightsVersion: LambdaInsightsVersion;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.LambdaInsightsVersion
 
 ---
 

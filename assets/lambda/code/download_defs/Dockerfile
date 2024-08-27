@@ -5,6 +5,10 @@ FROM --platform=linux/amd64 public.ecr.aws/lambda/python:3.12
 LABEL name=lambda/python/clamav
 LABEL version=1.0
 
+RUN curl -O https://lambda-insights-extension.s3-ap-northeast-1.amazonaws.com/amazon_linux/lambda-insights-extension.rpm && \
+    rpm -U lambda-insights-extension.rpm && \
+    rm -f lambda-insights-extension.rpm
+
 ARG CACHE_DATE=1
 RUN dnf update -y \
     && dnf -y install clamav clamav-update clamd \

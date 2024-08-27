@@ -12,6 +12,10 @@ RUN dnf update -y \
     && pip3 install --no-cache-dir cffi awslambdaric boto3 requests aws-lambda-powertools \
     && ln -s /etc/freshclam.conf /tmp/freshclam.conf
 
+RUN curl -O https://lambda-insights-extension.s3-ap-northeast-1.amazonaws.com/amazon_linux/lambda-insights-extension.rpm && \
+    rpm -U lambda-insights-extension.rpm && \
+    rm -f lambda-insights-extension.rpm
+
 COPY clamd.conf /etc/clamd.conf
 COPY lambda.py /var/task/lambda.py
 ENTRYPOINT [ "/var/lang/bin/python3", "-m", "awslambdaric" ]

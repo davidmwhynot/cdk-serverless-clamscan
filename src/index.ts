@@ -26,6 +26,7 @@ import {
   Function,
   IDestination,
   FileSystem as LambdaFileSystem,
+  LambdaInsightsVersion,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
 import {
@@ -102,6 +103,8 @@ export interface ServerlessClamscanProps {
    * Allows the use of imported buckets. When using imported buckets the user is responsible for adding the required policy statement to the bucket policy: `getPolicyStatementForBucket()` can be used to retrieve the policy statement required by the solution.
    */
   readonly acceptResponsibilityForUsingImportedBucket?: boolean;
+
+  readonly insightsVersion?: LambdaInsightsVersion;
 }
 
 /**
@@ -423,6 +426,7 @@ export class ServerlessClamscan extends Construct {
       timeout: Duration.minutes(15),
       memorySize: props.scanFunctionMemorySize ?? 10240,
       reservedConcurrentExecutions: props.reservedConcurrency,
+      insightsVersion: props.insightsVersion,
       environment: {
         EFS_MOUNT_PATH: this._efsMountPath,
         EFS_DEF_PATH: this._efsDefsPath,
@@ -450,6 +454,7 @@ export class ServerlessClamscan extends Construct {
       ),
       timeout: Duration.minutes(5),
       memorySize: 1024,
+      insightsVersion: props.insightsVersion,
       environment: {
         DEFS_BUCKET: defs_bucket.bucketName,
         POWERTOOLS_SERVICE_NAME: 'freshclam-update',

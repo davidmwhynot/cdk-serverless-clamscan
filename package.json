@@ -1,5 +1,5 @@
 {
-  "name": "cdk-serverless-clamscan",
+  "name": "@davidmwhynot/cdk-serverless-clamscan",
   "description": "Serverless architecture to virus scan objects in Amazon S3.",
   "repository": {
     "type": "git",
@@ -31,8 +31,8 @@
     "projen": "npx projen"
   },
   "author": {
-    "name": "Amazon Web Services",
-    "email": "donti@amazon.com",
+    "name": "David Whynot",
+    "email": "davidmwhynot@gmail.com",
     "organization": false
   },
   "devDependencies": {

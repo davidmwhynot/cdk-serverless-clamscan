@@ -433,6 +433,7 @@ export class ServerlessClamscan extends Construct {
         DEFS_URL: defs_bucket.virtualHostedUrlForObject(),
         POWERTOOLS_METRICS_NAMESPACE: 'serverless-clamscan',
         POWERTOOLS_SERVICE_NAME: 'virus-scan',
+        LAMBDA_INSIGHTS_LOG_LEVEL: 'info',
       },
     });
     this._scanFunction.connections.allowToAnyIpv4(
@@ -458,6 +459,7 @@ export class ServerlessClamscan extends Construct {
       environment: {
         DEFS_BUCKET: defs_bucket.bucketName,
         POWERTOOLS_SERVICE_NAME: 'freshclam-update',
+        LAMBDA_INSIGHTS_LOG_LEVEL: 'info',
       },
     });
     const stack = Stack.of(this);

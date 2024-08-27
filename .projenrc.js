@@ -3,15 +3,15 @@ const { awscdk } = require('projen');
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
 const project = new awscdk.AwsCdkConstructLibrary({
-  author: 'Amazon Web Services',
-  authorAddress: 'donti@amazon.com',
+  author: 'David Whynot',
+  authorAddress: 'davidmwhynot@gmail.com',
   cdkVersion: '2.54.0',
   defaultReleaseBranch: 'main',
   majorVersion: 2,
   npmDistTag: 'latest',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
-  name: 'cdk-serverless-clamscan',
-  repositoryUrl: 'https://github.com/awslabs/cdk-serverless-clamscan',
+  name: '@davidmwhynot/cdk-serverless-clamscan',
+  repositoryUrl: 'https://github.com/davidmwhynot/cdk-serverless-clamscan',
   description: 'Serverless architecture to virus scan objects in Amazon S3.',
   devDeps: ['@aws-cdk/assert@^2.11', 'cdk-nag@^2.15.18'],
   keywords: [
